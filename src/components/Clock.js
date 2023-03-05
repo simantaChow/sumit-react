@@ -16,12 +16,19 @@ class Clock extends React.Component{
             date: new Date(),
         });
     }
+
+    hadleClick(){
+        console.log('the button was clicked')
+    }
     
     render(){
         return(
-            <h1>
-                {this.state.date.toLocaleTimeString(this.props.local)}
-            </h1>
+            <div>
+                <h1>
+                    {this.state.date.toLocaleTimeString(this.props.local)}
+                </h1>
+                <button onClick={this.hadleClick}>Cleck here</button>
+            </div>
         );
     }
 }
